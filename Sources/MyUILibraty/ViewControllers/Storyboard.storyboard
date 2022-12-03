@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="MainViewController" customModule="MyUILibraty" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k18-At-OiA">
+                                <rect key="frame" x="129.66666666666666" y="193" width="133.99999999999997" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Press to count"/>
+                                <connections>
+                                    <action selector="calculateButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YF1-QH-Fa2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1yl-ps-dkp">
+                                <rect key="frame" x="40" y="119" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5w1-Ca-Vq8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AwK-j1-Qbn">
+                                <rect key="frame" x="253" y="119" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="wml-hN-K8u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRi-92-0tD">
+                                <rect key="frame" x="162.66666666666666" y="329" width="68" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dfY-ws-lZr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQR-SU-BdR">
+                                <rect key="frame" x="150" y="268" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.90030914099038051" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LQR-SU-BdR" firstAttribute="top" secondItem="k18-At-OiA" secondAttribute="bottom" constant="40" id="H02-WW-QrA"/>
+                            <constraint firstItem="k18-At-OiA" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HWF-AD-msN"/>
+                            <constraint firstItem="tRi-92-0tD" firstAttribute="top" secondItem="LQR-SU-BdR" secondAttribute="bottom" constant="40" id="UXN-hA-hzX"/>
+                            <constraint firstItem="1yl-ps-dkp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="bqe-mW-xNo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AwK-j1-Qbn" secondAttribute="trailing" constant="40" id="gYO-LE-H9F"/>
+                            <constraint firstItem="LQR-SU-BdR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="glc-V0-LUP"/>
+                            <constraint firstItem="AwK-j1-Qbn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="hDD-8b-WYg"/>
+                            <constraint firstItem="k18-At-OiA" firstAttribute="top" secondItem="AwK-j1-Qbn" secondAttribute="bottom" constant="40" id="iCY-Vr-apC"/>
+                            <constraint firstItem="1yl-ps-dkp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="jwn-fZ-LkI"/>
+                            <constraint firstItem="tRi-92-0tD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="y7C-N4-Yn6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateButton" destination="k18-At-OiA" id="QN3-s3-p2n"/>
+                        <outlet property="leftTextField" destination="1yl-ps-dkp" id="946-no-u34"/>
+                        <outlet property="resultLabel" destination="LQR-SU-BdR" id="heb-dX-lTN"/>
+                        <outlet property="rightTextField" destination="AwK-j1-Qbn" id="Qq5-Vt-Nik"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8.3969465648854964" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+</document>
