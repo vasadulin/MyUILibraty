@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MyBusinessLogic
 
 public class MainViewController: UIViewController {
 
@@ -29,11 +30,14 @@ public class MainViewController: UIViewController {
     
 
   @IBAction func calculateButtonAction(_ sender: Any) {
-    resultLabel.text = (leftTextField.text ?? "")  + (rightTextField.text ?? "")
+    let logic = DummyLogic()
+    resultLabel.text = logic.calculate(
+      first: (leftTextField.text ?? ""),
+      second: (rightTextField.text ?? "")) 
   }
   
   @IBAction func resetButtonAction(_ sender: Any) {
-    resultLabel.text = ""
+    resultLabel.text = "--"
   }
   
 }
