@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MainViewController: UIViewController {
+public class MainViewController: UIViewController {
 
   @IBOutlet weak var leftTextField: UITextField!
   @IBOutlet weak var rightTextField: UITextField!
