@@ -18,7 +18,7 @@ public class MainViewController: UIViewController {
   @IBOutlet weak var resultLabel: UILabel!
   
   
-  public static let viewControllerFromStoryboard = UIStoryboard(name: "MainViewController", bundle: Bundle.module).instantiateInitialViewController()!
+  public static let viewControllerFromStoryboard = UIStoryboard(name: "MyUIStoryboard", bundle: Bundle.module).instantiateInitialViewController()!
   
   
   public override func viewDidLoad() {
